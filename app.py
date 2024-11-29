@@ -26,9 +26,9 @@ def convert_to_calcius(C_temperature):
     return F_temperature
 
 
-@app.route('/fahrenheit')
-@app.route('/fahrenheit/<C_temperature>')
-def convert_fahrenheit(Temp=20):
+@app.route('/C')
+@app.route('/C/<Temp>')
+def convert_fahrenheit(Temp=20.0):
     return F"<h1>{Temp} in Celcius equals {convert_to_calcius(Temp)} in Farenheit. </h1>"
 
 
